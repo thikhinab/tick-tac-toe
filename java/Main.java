@@ -1,8 +1,11 @@
+import java.util.Random;
+
 public class Main {
     private static Board board = new Board();
+    private static Random random = new Random();
 
     public static void main(String[] args) {
-        String winner = Board.EMPTY_CELL;
+        String winner;
         do {
             board.printBoard();
             processPlayerMove();
@@ -57,8 +60,8 @@ public class Main {
         int y = -1;
         boolean invalidInput = true;
         do {
-            x = (int) (Math.random() * 3);
-            y = (int) (Math.random() * 3);
+            x = random.nextInt(3);
+            y = random.nextInt(3);
 
             if (board.isCellEmpty(x, y)) {
                 invalidInput = false;
