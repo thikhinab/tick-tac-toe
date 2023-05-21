@@ -9,9 +9,11 @@ import (
 	"time"
 )
 
-var EMPTY_CELL = " "
-var PLAYER = "X"
-var COMPUTER = "O"
+const (
+	EMPTY_CELL = " "
+	PLAYER = "X"
+	COMPUTER = "O"
+)
 
 var board [3][3]string
 var emptyCellCount = 9
